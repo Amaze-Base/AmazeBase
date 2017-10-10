@@ -25,4 +25,15 @@ Limitations (https://docs.mongodb.com/manual/reference/limits/):
 * Maximum nesting level of documents is 100. Allthough it is possible to nest document at such a deep level, please keep in mind that performance are gain from flat structures. Avoid deep nesting, if possible.
 * By default, each datase have an maximum size limit of 32 Terabytes, based on the limitations of the MMAPv1 storage engine
 
+Planned Client libraries:
+* Java
+* Android
+* Javascript / Angular
+* Arduino
+* ESP8266
+
+Future planned Clients:
+* iOS
+* .NET 4.5 / Core
+* C++
 
