@@ -16,9 +16,13 @@ public class Node {
 
     public Node(DBObject dbObject) {
         try {
-            _nodeId = dbObject.get("_id").toString();
-            _prnt = dbObject.get("_prnt").toString();
-            _node = dbObject.get("_node").toString();
+            Object nodeId = dbObject.get("_id");
+            Object prnt = dbObject.get("_prnt");
+            Object node = dbObject.get("_node");
+
+            if (nodeId != null) _nodeId = nodeId.toString();
+            if (prnt != null) _prnt = prnt.toString();
+            if (node != null) _node = node.toString();
         } catch (Exception ex) {
         }
     }

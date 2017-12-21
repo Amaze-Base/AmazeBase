@@ -7,6 +7,7 @@ public class Snapshot {
     private String key;
     private List<Snapshot> children;
     private String data;
+    private String NodeName;
 
     public Snapshot(){
         children = new ArrayList<>();
@@ -33,5 +34,13 @@ public class Snapshot {
 
     public void setData(String data) {
         this.data = data;
+    }
+
+    public String getNodeName() {
+        return NodeName;
+    }
+
+    public void setNodeName(String nodeName) {
+        NodeName = nodeName;
     }
 }

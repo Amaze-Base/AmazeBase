@@ -7,12 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.core.MongoOperations;
 
 @SpringBootApplication
-public class IcebaseApplication {
+public class AmazeBaseApplication {
 
 
     public static void main(String[] args) {
         // init projects
         SystemData systemData = SystemData.getInstance();
+        systemData.loadProjects();
         //systemData.setProjectList(MockData.initMockData());
 
         for (Project PROJECT : systemData.getProjectList()) {
@@ -30,8 +31,6 @@ public class IcebaseApplication {
             }
         }
 
-        // lets go lets go
-
         /* Add project for system paramters and config */
         try {
             Project systemProject = new Project("_system");
@@ -41,6 +40,6 @@ public class IcebaseApplication {
         } catch (Exception e) {
         }
 
-        SpringApplication.run(IcebaseApplication.class, args);
+        SpringApplication.run(AmazeBaseApplication.class, args);
     }
 }

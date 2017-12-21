@@ -21,9 +21,10 @@ public class AuthController {
 
     private SystemData systemData = SystemData.getInstance();
 
-    @RequestMapping(value = "/{apiKey}/{clientKey}/auth", method = RequestMethod.POST)
+    @RequestMapping(value = "/{apiKey}/auth", method = RequestMethod.POST)
     public ResponseEntity<StatusMessage> auth(@PathVariable("apiKey") String apiKey,
-                                              @PathVariable("clientKey") String clientKey,
+                                              //@PathVariable("clientKey") String clientKey,
+                                              @RequestParam("clientId") String clientKey,
                                               @RequestBody Credentials credentials) {
         Project project = systemData.getProjectByKey(apiKey);
         StatusMessage msg = new StatusMessage();

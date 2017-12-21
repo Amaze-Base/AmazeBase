@@ -64,7 +64,7 @@ public class SocketController {
                 break;
             case "DELETE":
                 break;
-            case "UPDATE":
+            case "PATCH":
                 break;
         }
     }
